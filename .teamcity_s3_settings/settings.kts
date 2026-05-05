@@ -73,6 +73,7 @@ object BucketInAnotherRegion : Project({
                 awsRegionName = "eu-west-3"
             }
             connectionId = "AmazonWebServicesAws"
+            forceVirtualHostAddressing = false
         }
         activeStorage {
             id = "PROJECT_EXT_11"
