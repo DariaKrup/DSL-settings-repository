@@ -66,7 +66,7 @@ project {
             profileId = "amazon-1"
             agentPoolId = "1"
             imagePriority = 3
-            name = "Instance Image"
+            name = "Instance Image (Next)"
             vpcSubnetId = "subnet-0c23f411b0800b216"
             keyPairName = "daria.krupkina"
             instanceType = "t2.medium"
