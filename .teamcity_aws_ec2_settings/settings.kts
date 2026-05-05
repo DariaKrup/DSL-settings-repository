@@ -61,5 +61,17 @@ project {
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
             source = Source("i-0aa8f308327fd1bc1")
         }
+        amazonEC2CloudImage {
+            id = "PROJECT_EXT_AWS"
+            profileId = "amazon-1"
+            agentPoolId = "1"
+            imagePriority = 3
+            name = "Instance Image"
+            vpcSubnetId = "subnet-0c23f411b0800b216"
+            keyPairName = "daria.krupkina"
+            instanceType = "t2.medium"
+            securityGroups = listOf("sg-072d8bfa0626ea2a6")
+            source = Source("i-0aa8f308327fd1bc1")
+        }
     }
 }
