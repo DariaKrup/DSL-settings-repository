@@ -62,7 +62,7 @@ project {
             source = Source("i-0aa8f308327fd1bc1")
         }
         amazonEC2CloudImage {
-            id = "PROJECT_EXT_AWS"
+            id = "PROJECT_EXT_AWS_1"
             profileId = "amazon-1"
             agentPoolId = "1"
             imagePriority = 3
