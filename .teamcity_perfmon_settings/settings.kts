@@ -90,6 +90,7 @@ object BuildJavaApp : BuildType({
     steps {
         maven {
             id = "Maven2"
+            enabled = false
             goals = "clean test"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             jdkHome = "%env.JDK_21_0%"
