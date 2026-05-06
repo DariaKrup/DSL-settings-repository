@@ -30,19 +30,4 @@ project {
     params {
         param("teamcity.internal.kubernetes.enableProxySettings", "true")
     }
-
-    features {
-        kubernetesCloudProfile {
-            id = "kube-2"
-            name = "GKE with proxy settings"
-            terminateIdleMinutes = 30
-            apiServerURL = "https://35.205.226.89"
-            authStrategy = token {
-                token = "credentialsJSON:90f62733-eaee-409e-ae69-9538673acd8c"
-            }
-            param("proxyServer", "http://34.53.237.245:8888")
-            param("proxyPassword", "9551024Margo")
-            param("proxyLogin", "dkrupkina")
-        }
-    }
 }
