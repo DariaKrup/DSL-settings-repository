@@ -27,7 +27,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2025.11"
+version = "2026.1"
 
 project {
 
@@ -38,6 +38,10 @@ project {
     buildType(BuildCmdWithDeletedPerfMon)
     buildType(AntBuildDisabledPerfMon)
     buildType(BuildJavaApp)
+
+    params {
+        param("level", "project")
+    }
 }
 
 object AntBuildDisabledPerfMon : BuildType({
