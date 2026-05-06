@@ -95,6 +95,10 @@ object BuildJavaApp : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             jdkHome = "%env.JDK_21_0%"
         }
+        script {
+            id = "simpleRunner"
+            scriptContent = """echo "Maven tests""""
+        }
     }
 
     features {
