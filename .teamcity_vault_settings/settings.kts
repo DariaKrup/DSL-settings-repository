@@ -41,7 +41,7 @@ project {
             url = "https://localhost:8200"
             authMethod = appRole {
                 roleId = "e0d9ef3e-a837-c70c-ea96-46e9870e6567"
-                secretId = ""
+                secretId = "credentialsJSON:77df44bd-ec3d-491e-8744-458e0a0435cb"
             }
         }
     }
