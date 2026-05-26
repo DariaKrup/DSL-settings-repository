@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.remoteParameters.hashiCorpVaultParameter
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -11,12 +12,19 @@ accordingly, and delete the patch script.
 changeBuildType(RelativeId("PublishFile")) {
     params {
         expect {
-            select("selectParameter", "",
-                    options = listOf("a1" to "1", "a2" to "2", "a3" to "3"))
+            hashiCorpVaultParameter {
+                name = "env.AWS_ACCESS_KEY_ID"
+                query = "aws/data/access!/AWS_ACCESS_KEY_ID"
+                vaultId = "VaultConnection1"
+            }
         }
         update {
-            select("selectParameter", "",
-                    options = listOf("a1" to "1", "a2" to "2", "a3" to "3"))
+            hashiCorpVaultParameter {
+                name = "env.AWS_ACCESS_KEY_ID"
+                query = "aws/data/access!/AWS_ACCESS_KEY_ID"
+                vaultId = "VaultConnection1"
+                param("buildTypeId", "VaultAndSelectFromDSL_PublishFile")
+            }
         }
     }
 }
