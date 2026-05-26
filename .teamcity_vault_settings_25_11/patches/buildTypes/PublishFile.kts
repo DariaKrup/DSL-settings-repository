@@ -26,13 +26,5 @@ changeBuildType(RelativeId("PublishFile")) {
                 param("buildTypeId", "VaultAndSelectPatchesInDSL_PublishFile")
             }
         }
-        expect {
-            select("selectParameter", "",
-                    options = listOf("a1" to "1", "a2" to "2", "a3" to "3"))
-        }
-        update {
-            select("selectParameter", "",
-                    options = listOf("a1" to "1", "a2" to "2", "a3" to "3"))
-        }
     }
 }
